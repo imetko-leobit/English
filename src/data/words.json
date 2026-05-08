@@ -1,0 +1,674 @@
+[
+  {
+    "id": "heads-up",
+    "word": "heads up",
+    "phonetic": "/hɛdz ʌp/",
+    "partOfSpeech": "іменник / вигук",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A warning or advance notice about something important",
+        "translation": "попередження / повідомлення заздалегідь",
+        "example": "Just a heads up — the deployment might take longer than expected tonight."
+      }
+    ]
+  },
+  {
+    "id": "touch-base",
+    "word": "touch base",
+    "phonetic": "/tʌtʃ beɪs/",
+    "partOfSpeech": "фразове дієслово",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To briefly contact or meet someone to discuss updates or status",
+        "translation": "зв'язатися / коротко обговорити",
+        "example": "Let's touch base tomorrow morning before the client call."
+      }
+    ]
+  },
+  {
+    "id": "ping",
+    "word": "ping",
+    "phonetic": "/pɪŋ/",
+    "partOfSpeech": "дієслово / іменник",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To send a quick message or notification to someone",
+        "translation": "написати / пінганути",
+        "example": "Ping me on Slack once the migration is complete."
+      }
+    ]
+  },
+  {
+    "id": "follow-up",
+    "word": "follow up",
+    "phonetic": "/ˈfɒl.oʊ ʌp/",
+    "partOfSpeech": "фразове дієслово / іменник",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To continue discussing or checking on something after an initial conversation",
+        "translation": "уточнювати / продовжувати обговорення",
+        "example": "I'll follow up with the QA team after the stand-up."
+      }
+    ]
+  },
+  {
+    "id": "walk-through",
+    "word": "walk through",
+    "phonetic": "/wɔːk θruː/",
+    "partOfSpeech": "фразове дієслово",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To explain something step by step",
+        "translation": "провести покроково / пояснити",
+        "example": "Can you walk us through the new authentication flow?"
+      }
+    ]
+  },
+  {
+    "id": "jump-on-call",
+    "word": "jump on a call",
+    "phonetic": "/dʒʌmp ɒn ə kɔːl/",
+    "partOfSpeech": "фраза",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To quickly join a meeting or voice call",
+        "translation": "швидко зідзвонитися",
+        "example": "Can we jump on a quick call to resolve this blocker?"
+      }
+    ]
+  },
+  {
+    "id": "take-offline",
+    "word": "take offline",
+    "phonetic": "/teɪk ˌɒfˈlaɪn/",
+    "partOfSpeech": "фразове дієслово",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To continue discussing something separately outside the current meeting",
+        "translation": "обговорити окремо після мітингу",
+        "example": "This is getting too detailed — let's take it offline."
+      }
+    ]
+  },
+  {
+    "id": "on-the-same-page",
+    "word": "on the same page",
+    "phonetic": "/ɒn ðə seɪm peɪdʒ/",
+    "partOfSpeech": "ідіома",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To have the same understanding or agreement about something",
+        "translation": "мати однакове розуміння / бути узгодженими",
+        "example": "Before we start development, I want to make sure everyone is on the same page."
+      }
+    ]
+  },
+  {
+    "id": "push-back",
+    "word": "push back",
+    "phonetic": "/pʊʃ bæk/",
+    "partOfSpeech": "фразове дієслово",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To resist or disagree with an idea, request, or deadline",
+        "translation": "заперечувати / відстоювати позицію",
+        "example": "Engineering pushed back on the proposed deadline because of the tech debt."
+      }
+    ]
+  },
+  {
+    "id": "estimate",
+    "word": "estimate",
+    "phonetic": "/ˈɛs.tɪ.meɪt/",
+    "partOfSpeech": "іменник / дієслово",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A rough calculation of the time or effort needed for a task",
+        "translation": "оцінка / estimate",
+        "example": "Can you provide an estimate for implementing the payment integration?"
+      }
+    ]
+  },
+  {
+    "id": "eta",
+    "word": "ETA",
+    "phonetic": "/ˌiː.tiːˈeɪ/",
+    "partOfSpeech": "іменник",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Expected time of completion or arrival",
+        "translation": "очікуваний час завершення",
+        "example": "What's the ETA on the production hotfix?"
+      }
+    ]
+  },
+  {
+    "id": "ship",
+    "word": "ship",
+    "phonetic": "/ʃɪp/",
+    "partOfSpeech": "дієслово",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To release or deliver software to users",
+        "translation": "зарелізити / доставити користувачам",
+        "example": "We want to ship the new dashboard feature by the end of the sprint."
+      }
+    ]
+  },
+  {
+    "id": "ship-it",
+    "word": "ship it",
+    "phonetic": "/ʃɪp ɪt/",
+    "partOfSpeech": "фраза",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "An expression meaning something is ready to be released",
+        "translation": "можна релізити / готово до продакшену",
+        "example": "The tests passed and QA approved it — ship it."
+      }
+    ]
+  },
+  {
+    "id": "out-of-scope",
+    "word": "out of scope",
+    "phonetic": "/aʊt əv skoʊp/",
+    "partOfSpeech": "фраза",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Not included in the agreed requirements or responsibilities",
+        "translation": "поза межами задачі / не входить в scope",
+        "example": "Supporting legacy browsers is currently out of scope for this release."
+      }
+    ]
+  },
+  {
+    "id": "edge-case",
+    "word": "edge case",
+    "phonetic": "/ɛdʒ keɪs/",
+    "partOfSpeech": "іменник",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A rare or unusual situation that occurs only under specific conditions",
+        "translation": "граничний випадок / edge case",
+        "example": "We handled the main flow, but we still need to test some edge cases."
+      }
+    ]
+  },
+  {
+    "id": "happy-path",
+    "word": "happy path",
+    "phonetic": "/ˈhæp.i pɑːθ/",
+    "partOfSpeech": "іменник",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The normal scenario where everything works as expected without errors",
+        "translation": "основний сценарій / happy path",
+        "example": "The happy path works fine, but error handling still needs improvement."
+      }
+    ]
+  },
+  {
+    "id": "block-time",
+    "word": "block time",
+    "phonetic": "/blɒk taɪm/",
+    "partOfSpeech": "фраза",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "To reserve time in a calendar for focused work or meetings",
+        "translation": "забронювати час",
+        "example": "I'll block some time tomorrow afternoon for the architecture review."
+      }
+    ]
+  },
+  {
+    "id": "actionable",
+    "word": "actionable",
+    "phonetic": "/ˈæk.ʃən.ə.bəl/",
+    "partOfSpeech": "прикметник",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Specific enough to allow clear action or next steps",
+        "translation": "такий, що можна виконати / конкретний",
+        "example": "Can we make these requirements more actionable for the dev team?"
+      }
+    ]
+  },
+  {
+    "id": "next-steps",
+    "word": "next steps",
+    "phonetic": "/nɛkst stɛps/",
+    "partOfSpeech": "іменник",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The actions that should happen after a discussion or meeting",
+        "translation": "наступні кроки",
+        "example": "Before we end the call, let's confirm the next steps."
+      }
+    ]
+  },
+  {
+    "id": "parking-lot",
+    "word": "parking lot",
+    "phonetic": "/ˈpɑː.kɪŋ lɒt/",
+    "partOfSpeech": "іменник",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A list of topics postponed for discussion later",
+        "translation": "список тем на потім",
+        "example": "Let's put this discussion in the parking lot and return to it after the demo."
+      }
+    ]
+  },
+  {
+    "id": "kickoff-meeting",
+    "word": "kickoff meeting",
+    "phonetic": "/ˈkɪk.ɒf ˈmiː.tɪŋ/",
+    "partOfSpeech": "іменник",
+    "category": "it meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The first official meeting at the start of a project",
+        "translation": "стартова зустріч проєкту",
+        "example": "Today's kickoff meeting is focused on roles, timelines, and communication."
+      }
+    ]
+  },
+  {
+    "id": "scope",
+    "word": "scope",
+    "phonetic": "/skoʊp/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The defined boundaries, features, and work included in a project",
+        "translation": "обсяг робіт / scope",
+        "example": "If you have any questions regarding the scope, feel free to contact me."
+      }
+    ]
+  },
+  {
+    "id": "delivery-plan",
+    "word": "delivery plan",
+    "phonetic": "/dɪˈlɪv.ər.i plæn/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A structured plan describing how and when project deliverables will be completed",
+        "translation": "план доставки / план реалізації",
+        "example": "The delivery plan will be refined during the foundation phase."
+      }
+    ]
+  },
+  {
+    "id": "dependencies",
+    "word": "dependencies",
+    "phonetic": "/dɪˈpen.dən.siz/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Tasks, systems, or people that other work relies on",
+        "translation": "залежності",
+        "example": "We need visibility into all technical dependencies before sprint planning."
+      }
+    ]
+  },
+  {
+    "id": "escalation",
+    "word": "escalation",
+    "phonetic": "/ˌes.kəˈleɪ.ʃən/",
+    "partOfSpeech": "іменник",
+    "category": "business communication",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The process of raising an issue to higher management",
+        "translation": "ескалація проблеми",
+        "example": "For high-level escalation, you can contact the delivery manager directly."
+      }
+    ]
+  },
+  {
+    "id": "capacity",
+    "word": "capacity",
+    "phonetic": "/kəˈpæs.ə.ti/",
+    "partOfSpeech": "іменник",
+    "category": "agile",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The amount of work a team can realistically complete",
+        "translation": "ресурсність / доступна потужність команди",
+        "example": "We want to use the team's capacity efficiently in the beginning."
+      }
+    ]
+  },
+  {
+    "id": "sprint-planning",
+    "word": "sprint planning",
+    "phonetic": "/sprɪnt ˈplæn.ɪŋ/",
+    "partOfSpeech": "іменник",
+    "category": "agile",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A meeting where the team decides what work will be completed in the next sprint",
+        "translation": "планування спринту",
+        "example": "During sprint planning, we define goals and priorities for the next two weeks."
+      }
+    ]
+  },
+  {
+    "id": "backlog-refinement",
+    "word": "backlog refinement",
+    "phonetic": "/ˈbæk.lɒɡ rɪˈfaɪn.mənt/",
+    "partOfSpeech": "іменник",
+    "category": "agile",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The process of reviewing and improving tasks in the backlog",
+        "translation": "уточнення беклогу",
+        "example": "We'll hold backlog refinement meetings before each sprint."
+      }
+    ]
+  },
+  {
+    "id": "workshop",
+    "word": "workshop",
+    "phonetic": "/ˈwɜːk.ʃɒp/",
+    "partOfSpeech": "іменник",
+    "category": "meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A collaborative meeting focused on discussion and problem-solving",
+        "translation": "воркшоп / робоча сесія",
+        "example": "We’ll use workshops to clarify workflows and business priorities."
+      }
+    ]
+  },
+  {
+    "id": "sprint-review",
+    "word": "sprint review",
+    "phonetic": "/sprɪnt rɪˈvjuː/",
+    "partOfSpeech": "іменник",
+    "category": "agile",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A meeting where the team demonstrates completed work from the sprint",
+        "translation": "огляд спринту / демо",
+        "example": "During sprint review, you'll see what functionality was completed."
+      }
+    ]
+  },
+  {
+    "id": "retrospective",
+    "word": "retrospective",
+    "phonetic": "/ˌret.rəˈspek.tɪv/",
+    "partOfSpeech": "іменник",
+    "category": "agile",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A meeting to discuss what went well and what should improve after a sprint",
+        "translation": "ретроспектива",
+        "example": "The retrospective helps improve the team's process and communication."
+      }
+    ]
+  },
+  {
+    "id": "cadence",
+    "word": "cadence",
+    "phonetic": "/ˈkeɪ.dəns/",
+    "partOfSpeech": "іменник",
+    "category": "meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The regular rhythm or schedule of meetings and work",
+        "translation": "ритм роботи / cadence",
+        "example": "Once we establish the meeting cadence, we'll invite the wider team."
+      }
+    ]
+  },
+  {
+    "id": "optional-attendee",
+    "word": "optional attendee",
+    "phonetic": "/ˈɒp.ʃən.əl əˌtenˈdiː/",
+    "partOfSpeech": "іменник",
+    "category": "meetings",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A person invited to a meeting who is not required to attend",
+        "translation": "необов'язковий учасник",
+        "example": "We'll add Alan as an optional attendee for workshops."
+      }
+    ]
+  },
+  {
+    "id": "foundation-phase",
+    "word": "foundation phase",
+    "phonetic": "/faʊnˈdeɪ.ʃən feɪz/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "An initial phase focused on setup, planning, and preparation",
+        "translation": "етап підготовки / foundation phase",
+        "example": "The foundation phase includes environment setup and backlog grooming."
+      }
+    ]
+  },
+  {
+    "id": "environment-setup",
+    "word": "environment setup",
+    "phonetic": "/ɪnˈvaɪ.rən.mənt ˈset.ʌp/",
+    "partOfSpeech": "іменник",
+    "category": "tech",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The process of configuring development or production systems",
+        "translation": "налаштування середовища",
+        "example": "The zero sprint will focus on environment setup and architecture preparation."
+      }
+    ]
+  },
+  {
+    "id": "knowledge-base",
+    "word": "knowledge base",
+    "phonetic": "/ˈnɒl.ɪdʒ beɪs/",
+    "partOfSpeech": "іменник",
+    "category": "documentation",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A centralized place where project documentation is stored",
+        "translation": "база знань",
+        "example": "Confluence will be used as the project's knowledge base."
+      }
+    ]
+  },
+  {
+    "id": "roadmap",
+    "word": "roadmap",
+    "phonetic": "/ˈroʊd.mæp/",
+    "partOfSpeech": "іменник",
+    "category": "product",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A high-level plan showing project goals and milestones over time",
+        "translation": "дорожня карта",
+        "example": "The roadmap will help everyone understand the delivery timeline."
+      }
+    ]
+  },
+  {
+    "id": "milestone",
+    "word": "milestone",
+    "phonetic": "/ˈmaɪl.stoʊn/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A major achievement or checkpoint in a project",
+        "translation": "ключовий етап",
+        "example": "We need to identify milestones for future board presentations."
+      }
+    ]
+  },
+  {
+    "id": "cost-optimization",
+    "word": "cost optimization",
+    "phonetic": "/kɒst ˌɒp.tɪ.maɪˈzeɪ.ʃən/",
+    "partOfSpeech": "іменник",
+    "category": "cloud",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The process of reducing infrastructure or operational expenses efficiently",
+        "translation": "оптимізація витрат",
+        "example": "Cost optimization will be an important part of the cloud infrastructure setup."
+      }
+    ]
+  },
+  {
+    "id": "best-practice",
+    "word": "best practice",
+    "phonetic": "/best ˈpræk.tɪs/",
+    "partOfSpeech": "іменник",
+    "category": "tech",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A recommended method considered effective and reliable",
+        "translation": "найкраща практика",
+        "example": "The infrastructure will follow Microsoft security best practices."
+      }
+    ]
+  },
+  {
+    "id": "federated-flow",
+    "word": "federated flow",
+    "phonetic": "/ˈfed.ə.reɪ.tɪd floʊ/",
+    "partOfSpeech": "іменник",
+    "category": "authentication",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "An authentication process involving multiple identity providers",
+        "translation": "федеративний процес автентифікації",
+        "example": "Initially we'll integrate with Entra ID without federated flows."
+      }
+    ]
+  },
+  {
+    "id": "entra-id",
+    "word": "Entra ID",
+    "phonetic": "/ˈen.trə aɪˈdiː/",
+    "partOfSpeech": "іменник",
+    "category": "cloud",
+    "meanings": [
+      {
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Microsoft's identity and access management platform",
+        "translation": "Microsoft Entra ID",
+        "example": "Authentication will initially be integrated with Entra ID."
+      }
+    ]
+  }
+]
