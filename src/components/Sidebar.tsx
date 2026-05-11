@@ -8,6 +8,7 @@ const NAV = [
   { href: "/dictionary", label: "Словник" },
   { href: "/statistics", label: "Статистика" },
   { href: "/grammar", label: "Граматика" },
+  { href: "/import", label: "Імпорт" },
 ];
 
 export default function Sidebar() {

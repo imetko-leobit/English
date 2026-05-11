@@ -31,8 +31,25 @@ function filterByCategory(words: Word[], cat: WordCategory | "all"): Word[] {
 
 function buildQueue(words: Word[]): Word[] {
   const now = Date.now();
-  const due = words.filter((w) => w.status === "new" || w.due <= now);
+  const due = words.filter((w) => w.due <= now);
   return [...due].sort(() => Math.random() - 0.5);
+}
+
+function getNextDueDate(words: Word[]): number | null {
+  const now = Date.now();
+  const futureDues = words.map((w) => w.due).filter((d) => d > now);
+  return futureDues.length > 0 ? Math.min(...futureDues) : null;
+}
+
+function formatNextSession(ts: number | null): string {
+  if (!ts) return "—";
+  const d = new Date(ts);
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  if (d.toDateString() === today.toDateString()) return "Сьогодні";
+  if (d.toDateString() === tomorrow.toDateString()) return "Завтра";
+  return d.toLocaleDateString("uk-UA", { day: "2-digit", month: "long" });
 }
 
 const RATINGS: { label: string; quality: Quality; color: string }[] = [
@@ -41,34 +58,6 @@ const RATINGS: { label: string; quality: Quality; color: string }[] = [
   { label: "Добре", quality: 2, color: "border-blue-800 text-blue-400 hover:bg-blue-900/30" },
   { label: "Легко", quality: 3, color: "border-green-800 text-green-400 hover:bg-green-900/30" },
 ];
-
-function NavArrow({
-  direction,
-  disabled,
-  onClick,
-}: {
-  direction: "left" | "right";
-  disabled: boolean;
-  onClick: (e: React.MouseEvent) => void;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      disabled={disabled}
-      aria-label={direction === "left" ? "Попередня картка" : "Наступна картка"}
-      className={[
-        "absolute top-1/2 -translate-y-1/2 z-10",
-        "w-9 h-9 flex items-center justify-center rounded-full",
-        "text-gray-500 hover:text-gray-200 hover:bg-gray-700",
-        "disabled:opacity-20 disabled:cursor-not-allowed",
-        "transition-all text-lg select-none",
-        direction === "left" ? "left-2" : "right-2",
-      ].join(" ")}
-    >
-      {direction === "left" ? "←" : "→"}
-    </button>
-  );
-}
 
 export default function FlashcardsPage() {
   const { words, rate } = useWords();
@@ -87,21 +76,6 @@ export default function FlashcardsPage() {
 
   const isDone = queue.length === 0 || currentIndex >= queue.length;
   const current = queue[currentIndex];
-
-  const canGoPrev = currentIndex > 0;
-  const canGoNext = !isDone && currentIndex < queue.length - 1;
-
-  function goToPrev() {
-    if (!canGoPrev) return;
-    setCurrentIndex((i) => i - 1);
-    setIsFlipped(false);
-  }
-
-  function goToNext() {
-    if (!canGoNext) return;
-    setCurrentIndex((i) => i + 1);
-    setIsFlipped(false);
-  }
 
   function handleCategoryChange(cat: WordCategory | "all") {
     localStorage.setItem(CATEGORY_KEY, cat);
@@ -139,33 +113,17 @@ export default function FlashcardsPage() {
       if (isDone) return;
 
       switch (e.key) {
-        case "ArrowLeft":
-          e.preventDefault();
-          goToPrev();
-          break;
-        case "ArrowRight":
-          e.preventDefault();
-          goToNext();
-          break;
-        case "1":
-          handleRate(0);
-          break;
-        case "2":
-          handleRate(1);
-          break;
-        case "3":
-          handleRate(2);
-          break;
-        case "4":
-          handleRate(3);
-          break;
+        case "1": handleRate(0); break;
+        case "2": handleRate(1); break;
+        case "3": handleRate(2); break;
+        case "4": handleRate(3); break;
       }
     }
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isDone, currentIndex, canGoPrev, canGoNext, current]);
+  }, [isDone, current]);
 
   function handleRestart() {
     setQueue(buildQueue(filterByCategory(words, selectedCategory)));
@@ -177,18 +135,15 @@ export default function FlashcardsPage() {
   }
 
   if (isDone) {
+    const nextDue = getNextDueDate(words);
     return (
       <div className="flex flex-col items-center justify-center min-h-screen gap-8 px-8">
         <div className="text-center">
           <div className="text-5xl mb-4">✓</div>
           <h1 className="text-2xl font-semibold text-gray-100 mb-2">
-            Сесію завершено!
+            На сьогодні все
           </h1>
-          <p className="text-gray-500 text-sm">
-            {queue.length === 0
-              ? "Немає карток для повторення зараз"
-              : "Усі картки переглянуто"}
-          </p>
+          <p className="text-gray-500 text-sm">Наступна сесія: {formatNextSession(nextDue)}</p>
         </div>
 
         <div className="flex gap-6">
@@ -215,6 +170,17 @@ export default function FlashcardsPage() {
   }
 
   const progress = Math.round((currentIndex / queue.length) * 100);
+
+  // Group meanings by pos for back face
+  const meaningsByPos = current.meanings.reduce<Record<string, typeof current.meanings>>(
+    (acc, m) => {
+      const key = m.pos ?? "";
+      acc[key] = [...(acc[key] ?? []), m];
+      return acc;
+    },
+    {}
+  );
+  const posGroups = Object.entries(meaningsByPos);
 
   return (
     <div className="flex flex-col items-center py-10 px-8 min-h-screen">
@@ -263,17 +229,6 @@ export default function FlashcardsPage() {
             className="card-face absolute inset-0 bg-gray-900 border border-gray-800 rounded-2xl flex flex-col cursor-pointer select-none"
             onClick={() => setIsFlipped(true)}
           >
-            <NavArrow
-              direction="left"
-              disabled={!canGoPrev}
-              onClick={(e) => { e.stopPropagation(); goToPrev(); }}
-            />
-            <NavArrow
-              direction="right"
-              disabled={!canGoNext}
-              onClick={(e) => { e.stopPropagation(); goToNext(); }}
-            />
-
             {/* Header */}
             <div className="flex items-center gap-2 px-10 pt-7">
               <CategoryTag category={current.category} />
@@ -311,7 +266,7 @@ export default function FlashcardsPage() {
             </div>
           </div>
 
-          {/* Back face — click anywhere except buttons to flip to front */}
+          {/* Back face */}
           <div
             className="card-face card-back absolute inset-0 bg-gray-900 border border-gray-800 rounded-2xl flex flex-col overflow-hidden cursor-pointer select-none"
             onClick={() => setIsFlipped(false)}
@@ -319,24 +274,37 @@ export default function FlashcardsPage() {
             {/* Header */}
             <div className="flex items-center gap-2 px-10 pt-7 pb-4 shrink-0">
               <CategoryTag category={current.category} />
-              <span className="text-xs text-gray-600">{current.partOfSpeech}</span>
               <span className="ml-auto text-base font-bold text-gray-100">
                 {current.word}
               </span>
             </div>
 
-            {/* Meanings — scrollable */}
-            <div className="flex-1 overflow-y-auto px-10 flex flex-col gap-4">
-              {current.meanings.map((m, i) => (
-                <div key={i} className="border-l-2 border-gray-700 pl-4">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <FreqBadge freq={m.freq} label={m.freqLabel} />
+            {/* Meanings grouped by pos — scrollable */}
+            <div
+              className="flex-1 overflow-y-auto px-10 flex flex-col gap-5"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {posGroups.map(([pos, meanings]) => (
+                <div key={pos}>
+                  {pos && (
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                      {pos}
+                    </p>
+                  )}
+                  <div className="flex flex-col gap-4">
+                    {meanings.map((m, i) => (
+                      <div key={i} className="border-l-2 border-gray-700 pl-4">
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <FreqBadge freq={m.freq} label={m.freqLabel} />
+                        </div>
+                        <p className="text-sm font-semibold text-gray-100 mb-0.5">
+                          {m.definition}
+                        </p>
+                        <p className="text-sm text-gray-400 mb-1">{m.translation}</p>
+                        <p className="text-xs text-gray-600 italic">{m.example}</p>
+                      </div>
+                    ))}
                   </div>
-                  <p className="text-sm font-semibold text-gray-100 mb-0.5">
-                    {m.definition}
-                  </p>
-                  <p className="text-sm text-gray-400 mb-1">{m.translation}</p>
-                  <p className="text-xs text-gray-600 italic">{m.example}</p>
                 </div>
               ))}
             </div>
@@ -362,7 +330,7 @@ export default function FlashcardsPage() {
 
       {/* Keyboard hint */}
       <p className="mt-6 text-xs text-gray-700">
-        ← → навігація · 1–4 оцінка
+        1–4 оцінка
       </p>
     </div>
   );

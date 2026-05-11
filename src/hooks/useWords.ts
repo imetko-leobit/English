@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Word } from "@/lib/types";
 import type { Quality } from "@/lib/sm2";
 import { applyRating } from "@/lib/sm2";
-import { mergeWithStorage, saveSm2Data, recordReview } from "@/lib/storage";
+import { mergeWithStorage, saveSm2Data, recordReview, loadCustomWords, saveCustomWords, loadDeletedWordIds, addDeletedWordId } from "@/lib/storage";
 import { WORDS } from "@/data/words";
 
 const SM2_KEYS: (keyof Word)[] = [
@@ -24,7 +24,11 @@ function pickSm2(word: Word) {
 }
 
 export function useWords() {
-  const [words, setWords] = useState<Word[]>(() => mergeWithStorage(WORDS));
+  const [words, setWords] = useState<Word[]>(() => {
+    const deleted = loadDeletedWordIds();
+    const all = [...WORDS, ...loadCustomWords()].filter((w) => !deleted.has(w.id));
+    return mergeWithStorage(all);
+  });
 
   function rate(id: string, quality: Quality) {
     setWords((prev) => {
@@ -40,5 +44,16 @@ export function useWords() {
     });
   }
 
-  return { words, rate };
+  function deleteWord(id: string) {
+    const customWords = loadCustomWords();
+    const isCustom = customWords.some((w) => w.id === id);
+    if (isCustom) {
+      saveCustomWords(customWords.filter((w) => w.id !== id));
+    } else {
+      addDeletedWordId(id);
+    }
+    setWords((prev) => prev.filter((w) => w.id !== id));
+  }
+
+  return { words, rate, deleteWord };
 }

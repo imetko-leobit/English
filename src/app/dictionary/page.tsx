@@ -34,12 +34,6 @@ const CATEGORY_LABELS: Record<WordCategory, string> = {
   slang: "Сленг",
 };
 
-const STATUS_LABELS: Record<WordStatus, string> = {
-  new: "новий",
-  learning: "вивчається",
-  learned: "вивчений",
-};
-
 function formatDate(ts: number | null): string {
   if (!ts) return "—";
   return new Date(ts).toLocaleDateString("uk-UA", {
@@ -59,20 +53,41 @@ function PrimaryTranslation({ word }: { word: Word }) {
 }
 
 function ExpandedWord({ word }: { word: Word }) {
+  const posGroups = word.meanings.reduce<Record<string, typeof word.meanings>>(
+    (acc, m) => {
+      const key = m.pos ?? "";
+      acc[key] = [...(acc[key] ?? []), m];
+      return acc;
+    },
+    {}
+  );
+  const groups = Object.entries(posGroups);
+
   return (
     <div className="px-5 py-5 border-t border-gray-800 bg-gray-800/50">
       <div className="flex flex-col gap-4 max-w-3xl">
-        <div className="flex flex-col gap-3">
-          {word.meanings.map((m, i) => (
-            <div key={i} className="border-l-2 border-gray-700 pl-4">
-              <div className="flex items-center gap-2 mb-1">
-                <FreqBadge freq={m.freq} label={m.freqLabel} />
+        <div className="flex flex-col gap-4">
+          {groups.map(([pos, meanings]) => (
+            <div key={pos}>
+              {pos && (
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                  {pos}
+                </p>
+              )}
+              <div className="flex flex-col gap-3">
+                {meanings.map((m, i) => (
+                  <div key={i} className="border-l-2 border-gray-700 pl-4">
+                    <div className="flex items-center gap-2 mb-1">
+                      <FreqBadge freq={m.freq} label={m.freqLabel} />
+                    </div>
+                    <p className="text-sm font-semibold text-gray-100 mb-0.5">
+                      {m.definition}
+                    </p>
+                    <p className="text-sm text-gray-400 mb-1">{m.translation}</p>
+                    <p className="text-xs text-gray-600 italic">{m.example}</p>
+                  </div>
+                ))}
               </div>
-              <p className="text-sm font-semibold text-gray-100 mb-0.5">
-                {m.definition}
-              </p>
-              <p className="text-sm text-gray-400 mb-1">{m.translation}</p>
-              <p className="text-xs text-gray-600 italic">{m.example}</p>
             </div>
           ))}
         </div>
@@ -115,7 +130,7 @@ function ExpandedWord({ word }: { word: Word }) {
 }
 
 export default function DictionaryPage() {
-  const { words } = useWords();
+  const { words, deleteWord } = useWords();
 
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<"all" | WordStatus>("all");
@@ -123,6 +138,7 @@ export default function DictionaryPage() {
     "all"
   );
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     return words.filter((w) => {
@@ -137,6 +153,17 @@ export default function DictionaryPage() {
       return true;
     });
   }, [words, statusFilter, categoryFilter, search]);
+
+  function handleDeleteClick(e: React.MouseEvent, id: string) {
+    e.stopPropagation();
+    if (confirmDeleteId === id) {
+      deleteWord(id);
+      if (expandedId === id) setExpandedId(null);
+      setConfirmDeleteId(null);
+    } else {
+      setConfirmDeleteId(id);
+    }
+  }
 
   return (
     <div className="px-8 py-8 max-w-5xl">
@@ -198,29 +225,49 @@ export default function DictionaryPage() {
             <div key={word.id}>
               {idx > 0 && <div className="h-px bg-gray-800 mx-5" />}
 
-              <button
-                onClick={() =>
-                  setExpandedId(expandedId === word.id ? null : word.id)
-                }
-                className="w-full flex items-center gap-4 px-5 py-4 hover:bg-gray-800 transition-colors text-left"
+              <div
+                className="flex items-center hover:bg-gray-800 transition-colors"
+                onMouseLeave={() => {
+                  if (confirmDeleteId === word.id) setConfirmDeleteId(null);
+                }}
               >
-                <StatusDot status={word.status} />
-                <span className="w-44 font-medium text-gray-100 text-sm shrink-0">
-                  {word.word}
-                </span>
-                <PrimaryTranslation word={word} />
-                <div className="ml-auto flex items-center gap-4">
-                  <CategoryTag category={word.category} />
-                  <span className="text-xs text-gray-600 w-32 text-right shrink-0">
-                    {formatDate(word.due)}
+                <button
+                  onClick={() =>
+                    setExpandedId(expandedId === word.id ? null : word.id)
+                  }
+                  className="flex items-center gap-4 flex-1 px-5 py-4 text-left min-w-0"
+                >
+                  <StatusDot status={word.status} />
+                  <span className="w-44 font-medium text-gray-100 text-sm shrink-0">
+                    {word.word}
                   </span>
-                  <span
-                    className={`text-gray-600 text-xs transition-transform duration-200 ${expandedId === word.id ? "rotate-180" : ""}`}
-                  >
-                    ▾
-                  </span>
-                </div>
-              </button>
+                  <PrimaryTranslation word={word} />
+                  <div className="ml-auto flex items-center gap-4 shrink-0">
+                    <CategoryTag category={word.category} />
+                    <span className="text-xs text-gray-600 w-32 text-right">
+                      {formatDate(word.due)}
+                    </span>
+                    <span
+                      className={`text-gray-600 text-xs transition-transform duration-200 ${expandedId === word.id ? "rotate-180" : ""}`}
+                    >
+                      ▾
+                    </span>
+                  </div>
+                </button>
+
+                <button
+                  onClick={(e) => handleDeleteClick(e, word.id)}
+                  title="Видалити слово"
+                  className={[
+                    "shrink-0 mx-3 px-2.5 py-1 text-xs rounded-md border transition-colors",
+                    confirmDeleteId === word.id
+                      ? "border-red-700 text-red-400 bg-red-900/20 hover:bg-red-900/40"
+                      : "border-gray-700 text-gray-600 hover:border-red-800 hover:text-red-400",
+                  ].join(" ")}
+                >
+                  {confirmDeleteId === word.id ? "Підтвердити" : "✕"}
+                </button>
+              </div>
 
               {expandedId === word.id && <ExpandedWord word={word} />}
             </div>

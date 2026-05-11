@@ -10,6 +10,7 @@ export type WordCategory =
 export type MeaningFreq = "primary" | "secondary" | "rare";
 
 export interface Meaning {
+  pos?: string;
   freq: MeaningFreq;
   freqLabel: "основне" | "розмовне" | "рідко";
   definition: string;

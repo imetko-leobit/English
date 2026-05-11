@@ -58,3 +58,46 @@ export function mergeWithStorage(words: Word[]): Word[] {
     return saved ? { ...w, ...saved } : w;
   });
 }
+
+const CUSTOM_WORDS_KEY = "english-custom-words";
+
+export function loadCustomWords(): Word[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = localStorage.getItem(CUSTOM_WORDS_KEY);
+    return raw ? (JSON.parse(raw) as Word[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function saveCustomWords(words: Word[]): void {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(CUSTOM_WORDS_KEY, JSON.stringify(words));
+}
+
+export function addCustomWords(newWords: Word[]): void {
+  const existing = loadCustomWords();
+  const existingIds = new Set(existing.map((w) => w.id));
+  const toAdd = newWords.filter((w) => !existingIds.has(w.id));
+  saveCustomWords([...existing, ...toAdd]);
+}
+
+const DELETED_KEY = "english-deleted-words";
+
+export function loadDeletedWordIds(): Set<string> {
+  if (typeof window === "undefined") return new Set();
+  try {
+    const raw = localStorage.getItem(DELETED_KEY);
+    return raw ? new Set(JSON.parse(raw) as string[]) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+export function addDeletedWordId(id: string): void {
+  if (typeof window === "undefined") return;
+  const ids = loadDeletedWordIds();
+  ids.add(id);
+  localStorage.setItem(DELETED_KEY, JSON.stringify([...ids]));
+}

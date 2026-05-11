@@ -18,7 +18,11 @@
       "Bash(ln -s ../next/dist/bin/next /Users/user/Documents/English/node_modules/.bin/next)",
       "Bash(curl -s http://localhost:3000)",
       "Bash(kill %1)",
-      "Bash(node -e \"const w = require\\('./src/data/words.json'\\); console.log\\('Total words:', w.length\\); const cats = {}; w.forEach\\(x => cats[x.category] = \\(cats[x.category]||0\\)+1\\); console.log\\('By category:', JSON.stringify\\(cats, null, 2\\)\\);\")"
+      "Bash(node -e \"const w = require\\('./src/data/words.json'\\); console.log\\('Total words:', w.length\\); const cats = {}; w.forEach\\(x => cats[x.category] = \\(cats[x.category]||0\\)+1\\); console.log\\('By category:', JSON.stringify\\(cats, null, 2\\)\\);\")",
+      "Bash(node /Users/user/Documents/English/node_modules/typescript/bin/tsc --noEmit --project /Users/user/Documents/English/tsconfig.json)",
+      "Bash(node node_modules/typescript/lib/tsc.js --noEmit)",
+      "Bash(node -e \"require\\('/Users/user/Documents/English/node_modules/typescript'\\)\")",
+      "Bash(node /Users/user/Documents/English/node_modules/typescript/lib/tsc.js --noEmit --project /Users/user/Documents/English/tsconfig.json)"
     ]
   }
 }

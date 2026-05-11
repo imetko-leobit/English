@@ -7,6 +7,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "іменник / вигук",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A warning or advance notice about something important",
@@ -23,6 +24,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "фразове дієслово",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To briefly contact or meet someone to discuss updates or status",
@@ -39,11 +41,20 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "дієслово",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To send a quick message or notification to someone",
         "translation": "написати / пінганути",
         "example": "Ping me on Slack once the migration is complete."
+      },
+      {
+        "pos": "іменник",
+        "freq": "secondary",
+        "freqLabel": "розмовне",
+        "definition": "A short message or notification sent to someone",
+        "translation": "повідомлення / сигнал",
+        "example": "I sent him a ping but haven't heard back yet."
       }
     ]
   },
@@ -55,11 +66,20 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "фразове дієслово",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To continue discussing or checking on something after an initial conversation",
         "translation": "уточнювати / продовжувати обговорення",
         "example": "I'll follow up with the QA team after the stand-up."
+      },
+      {
+        "pos": "іменник",
+        "freq": "secondary",
+        "freqLabel": "розмовне",
+        "definition": "A subsequent action or message to check on progress",
+        "translation": "подальший крок / нагадування",
+        "example": "Send a follow-up email if you don't hear back by Friday."
       }
     ]
   },
@@ -71,6 +91,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "фразове дієслово",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To explain something step by step",
@@ -87,6 +108,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "фраза",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To quickly join a meeting or voice call",
@@ -103,6 +125,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "фразове дієслово",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To continue discussing something separately outside the current meeting",
@@ -119,6 +142,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "ідіома",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To have the same understanding or agreement about something",
@@ -135,6 +159,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "фразове дієслово",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To resist or disagree with an idea, request, or deadline",
@@ -151,27 +176,20 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A rough calculation of the time or effort needed for a task",
         "translation": "оцінка / estimate",
         "example": "Can you provide an estimate for implementing the payment integration?"
-      }
-    ]
-  },
-  {
-    "id": "eta",
-    "word": "ETA",
-    "phonetic": "/ˌiː.tiːˈeɪ/",
-    "partOfSpeech": "іменник",
-    "category": "it meetings",
-    "meanings": [
+      },
       {
-        "freq": "primary",
-        "freqLabel": "основне",
-        "definition": "Expected time of completion or arrival",
-        "translation": "очікуваний час завершення",
-        "example": "What's the ETA on the production hotfix?"
+        "pos": "дієслово",
+        "freq": "secondary",
+        "freqLabel": "розмовне",
+        "definition": "To approximately calculate the time, cost, or size of something",
+        "translation": "оцінити / підрахувати приблизно",
+        "example": "We need to estimate how long the migration will take."
       }
     ]
   },
@@ -183,6 +201,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "дієслово",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To release or deliver software to users",
@@ -199,6 +218,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "фраза",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "An expression meaning something is ready to be released",
@@ -215,6 +235,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "фраза",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "Not included in the agreed requirements or responsibilities",
@@ -231,27 +252,12 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A rare or unusual situation that occurs only under specific conditions",
         "translation": "граничний випадок / edge case",
         "example": "We handled the main flow, but we still need to test some edge cases."
-      }
-    ]
-  },
-  {
-    "id": "happy-path",
-    "word": "happy path",
-    "phonetic": "/ˈhæp.i pɑːθ/",
-    "partOfSpeech": "іменник",
-    "category": "it meetings",
-    "meanings": [
-      {
-        "freq": "primary",
-        "freqLabel": "основне",
-        "definition": "The normal scenario where everything works as expected without errors",
-        "translation": "основний сценарій / happy path",
-        "example": "The happy path works fine, but error handling still needs improvement."
       }
     ]
   },
@@ -263,43 +269,12 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "фраза",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "To reserve time in a calendar for focused work or meetings",
         "translation": "забронювати час",
         "example": "I'll block some time tomorrow afternoon for the architecture review."
-      }
-    ]
-  },
-  {
-    "id": "actionable",
-    "word": "actionable",
-    "phonetic": "/ˈæk.ʃən.ə.bəl/",
-    "partOfSpeech": "прикметник",
-    "category": "it meetings",
-    "meanings": [
-      {
-        "freq": "primary",
-        "freqLabel": "основне",
-        "definition": "Specific enough to allow clear action or next steps",
-        "translation": "такий, що можна виконати / конкретний",
-        "example": "Can we make these requirements more actionable for the dev team?"
-      }
-    ]
-  },
-  {
-    "id": "next-steps",
-    "word": "next steps",
-    "phonetic": "/nɛkst stɛps/",
-    "partOfSpeech": "іменник",
-    "category": "it meetings",
-    "meanings": [
-      {
-        "freq": "primary",
-        "freqLabel": "основне",
-        "definition": "The actions that should happen after a discussion or meeting",
-        "translation": "наступні кроки",
-        "example": "Before we end the call, let's confirm the next steps."
       }
     ]
   },
@@ -311,6 +286,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A list of topics postponed for discussion later",
@@ -327,6 +303,7 @@
     "category": "it meetings",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "The first official meeting at the start of a project",
@@ -343,27 +320,12 @@
     "category": "project management",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "The defined boundaries, features, and work included in a project",
         "translation": "обсяг робіт / scope",
         "example": "If you have any questions regarding the scope, feel free to contact me."
-      }
-    ]
-  },
-  {
-    "id": "delivery-plan",
-    "word": "delivery plan",
-    "phonetic": "/dɪˈlɪv.ər.i plæn/",
-    "partOfSpeech": "іменник",
-    "category": "project management",
-    "meanings": [
-      {
-        "freq": "primary",
-        "freqLabel": "основне",
-        "definition": "A structured plan describing how and when project deliverables will be completed",
-        "translation": "план доставки / план реалізації",
-        "example": "The delivery plan will be refined during the foundation phase."
       }
     ]
   },
@@ -375,27 +337,12 @@
     "category": "project management",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "Tasks, systems, or people that other work relies on",
         "translation": "залежності",
         "example": "We need visibility into all technical dependencies before sprint planning."
-      }
-    ]
-  },
-  {
-    "id": "escalation",
-    "word": "escalation",
-    "phonetic": "/ˌes.kəˈleɪ.ʃən/",
-    "partOfSpeech": "іменник",
-    "category": "business communication",
-    "meanings": [
-      {
-        "freq": "primary",
-        "freqLabel": "основне",
-        "definition": "The process of raising an issue to higher management",
-        "translation": "ескалація проблеми",
-        "example": "For high-level escalation, you can contact the delivery manager directly."
       }
     ]
   },
@@ -407,6 +354,7 @@
     "category": "agile",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "The amount of work a team can realistically complete",
@@ -423,6 +371,7 @@
     "category": "agile",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A meeting where the team decides what work will be completed in the next sprint",
@@ -439,6 +388,7 @@
     "category": "agile",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "The process of reviewing and improving tasks in the backlog",
@@ -455,11 +405,12 @@
     "category": "meetings",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A collaborative meeting focused on discussion and problem-solving",
         "translation": "воркшоп / робоча сесія",
-        "example": "We’ll use workshops to clarify workflows and business priorities."
+        "example": "We'll use workshops to clarify workflows and business priorities."
       }
     ]
   },
@@ -471,6 +422,7 @@
     "category": "agile",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A meeting where the team demonstrates completed work from the sprint",
@@ -487,6 +439,7 @@
     "category": "agile",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A meeting to discuss what went well and what should improve after a sprint",
@@ -503,6 +456,7 @@
     "category": "meetings",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "The regular rhythm or schedule of meetings and work",
@@ -519,6 +473,7 @@
     "category": "meetings",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A person invited to a meeting who is not required to attend",
@@ -535,27 +490,12 @@
     "category": "project management",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "An initial phase focused on setup, planning, and preparation",
         "translation": "етап підготовки / foundation phase",
         "example": "The foundation phase includes environment setup and backlog grooming."
-      }
-    ]
-  },
-  {
-    "id": "environment-setup",
-    "word": "environment setup",
-    "phonetic": "/ɪnˈvaɪ.rən.mənt ˈset.ʌp/",
-    "partOfSpeech": "іменник",
-    "category": "tech",
-    "meanings": [
-      {
-        "freq": "primary",
-        "freqLabel": "основне",
-        "definition": "The process of configuring development or production systems",
-        "translation": "налаштування середовища",
-        "example": "The zero sprint will focus on environment setup and architecture preparation."
       }
     ]
   },
@@ -567,6 +507,7 @@
     "category": "documentation",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A centralized place where project documentation is stored",
@@ -583,6 +524,7 @@
     "category": "product",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A high-level plan showing project goals and milestones over time",
@@ -599,6 +541,7 @@
     "category": "project management",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
         "definition": "A major achievement or checkpoint in a project",
@@ -608,66 +551,342 @@
     ]
   },
   {
-    "id": "cost-optimization",
-    "word": "cost optimization",
-    "phonetic": "/kɒst ˌɒp.tɪ.maɪˈzeɪ.ʃən/",
+    "id": "risk",
+    "word": "risk",
+    "phonetic": "/rɪsk/",
     "partOfSpeech": "іменник",
-    "category": "cloud",
+    "category": "project management",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
-        "definition": "The process of reducing infrastructure or operational expenses efficiently",
-        "translation": "оптимізація витрат",
-        "example": "Cost optimization will be an important part of the cloud infrastructure setup."
+        "definition": "A potential problem that may negatively affect the project",
+        "translation": "ризик",
+        "example": "There is a risk of delays due to dependency on a third-party service."
       }
     ]
   },
   {
-    "id": "best-practice",
-    "word": "best practice",
-    "phonetic": "/best ˈpræk.tɪs/",
+    "id": "issue",
+    "word": "issue",
+    "phonetic": "/ˈɪʃ.uː/",
     "partOfSpeech": "іменник",
-    "category": "tech",
+    "category": "project management",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
-        "definition": "A recommended method considered effective and reliable",
-        "translation": "найкраща практика",
-        "example": "The infrastructure will follow Microsoft security best practices."
+        "definition": "A problem that needs to be resolved",
+        "translation": "проблема",
+        "example": "We encountered an issue during deployment."
       }
     ]
   },
   {
-    "id": "federated-flow",
-    "word": "federated flow",
-    "phonetic": "/ˈfed.ə.reɪ.tɪd floʊ/",
+    "id": "blocker",
+    "word": "blocker",
+    "phonetic": "/ˈblɒk.ər/",
     "partOfSpeech": "іменник",
-    "category": "authentication",
+    "category": "project management",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
-        "definition": "An authentication process involving multiple identity providers",
-        "translation": "федеративний процес автентифікації",
-        "example": "Initially we'll integrate with Entra ID without federated flows."
+        "definition": "Something that prevents progress",
+        "translation": "блокер",
+        "example": "This dependency is a blocker for our release."
       }
     ]
   },
   {
-    "id": "entra-id",
-    "word": "Entra ID",
-    "phonetic": "/ˈen.trə aɪˈdiː/",
+    "id": "limitation",
+    "word": "limitation",
+    "phonetic": "/ˌlɪm.ɪˈteɪ.ʃən/",
     "partOfSpeech": "іменник",
-    "category": "cloud",
+    "category": "project management",
     "meanings": [
       {
+        "pos": "іменник",
         "freq": "primary",
         "freqLabel": "основне",
-        "definition": "Microsoft's identity and access management platform",
-        "translation": "Microsoft Entra ID",
-        "example": "Authentication will initially be integrated with Entra ID."
+        "definition": "A restriction or constraint in the system or process",
+        "translation": "обмеження",
+        "example": "This API has a limitation on request size."
+      }
+    ]
+  },
+  {
+    "id": "constraint",
+    "word": "constraint",
+    "phonetic": "/kənˈstreɪnt/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A condition that limits what can be done",
+        "translation": "обмеження",
+        "example": "Budget constraints affect our timeline."
+      }
+    ]
+  },
+  {
+    "id": "dependency",
+    "word": "dependency",
+    "phonetic": "/dɪˈpen.dən.si/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Something that the task relies on",
+        "translation": "залежність",
+        "example": "We have a dependency on the backend team."
+      }
+    ]
+  },
+  {
+    "id": "bottleneck",
+    "word": "bottleneck",
+    "phonetic": "/ˈbɒt.əl.nek/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A point where progress is slowed down",
+        "translation": "вузьке місце",
+        "example": "Testing has become a bottleneck in the process."
+      }
+    ]
+  },
+  {
+    "id": "edge-case",
+    "word": "edge case",
+    "phonetic": "/ˈedʒ keɪs/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "An unusual or extreme situation",
+        "translation": "граничний випадок",
+        "example": "We need to handle this edge case properly."
+      }
+    ]
+  },
+  {
+    "id": "unexpected-behavior",
+    "word": "unexpected behavior",
+    "phonetic": "/ˌʌn.ɪkˈspek.tɪd bɪˈheɪ.vjər/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Behavior that differs from expected results",
+        "translation": "неочікувана поведінка",
+        "example": "The system shows unexpected behavior under load."
+      }
+    ]
+  },
+  {
+    "id": "bug",
+    "word": "bug",
+    "phonetic": "/bʌɡ/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "An error in the software",
+        "translation": "баг",
+        "example": "We found a bug in the login flow."
+      }
+    ]
+  },
+  {
+    "id": "critical-issue",
+    "word": "critical issue",
+    "phonetic": "/ˈkrɪt.ɪ.kəl ˈɪʃ.uː/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A severe problem that requires immediate attention",
+        "translation": "критична проблема",
+        "example": "This is a critical issue that blocks production."
+      }
+    ]
+  },
+  {
+    "id": "performance-issue",
+    "word": "performance issue",
+    "phonetic": "/pəˈfɔː.məns ˈɪʃ.uː/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A problem related to system speed or efficiency",
+        "translation": "проблема продуктивності",
+        "example": "We noticed a performance issue on mobile devices."
+      }
+    ]
+  },
+  {
+    "id": "delay",
+    "word": "delay",
+    "phonetic": "/dɪˈleɪ/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A situation when something takes longer than expected",
+        "translation": "затримка",
+        "example": "There might be a delay due to testing."
+      }
+    ]
+  },
+  {
+    "id": "misalignment",
+    "word": "misalignment",
+    "phonetic": "/ˌmɪs.əˈlaɪn.mənt/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A lack of agreement or understanding",
+        "translation": "неузгодженість",
+        "example": "There is a misalignment between teams."
+      }
+    ]
+  },
+  {
+    "id": "misunderstanding",
+    "word": "misunderstanding",
+    "phonetic": "/ˌmɪs.ʌn.dəˈstæn.dɪŋ/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A failure to understand something correctly",
+        "translation": "непорозуміння",
+        "example": "This was caused by a misunderstanding of requirements."
+      }
+    ]
+  },
+  {
+    "id": "lack-of-clarity",
+    "word": "lack of clarity",
+    "phonetic": "/læk əv ˈklær.ə.ti/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A situation where information is not clear",
+        "translation": "відсутність ясності",
+        "example": "There is a lack of clarity in the requirements."
+      }
+    ]
+  },
+  {
+    "id": "scope-creep",
+    "word": "scope creep",
+    "phonetic": "/skəʊp kriːp/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Uncontrolled changes or continuous growth in project scope",
+        "translation": "розширення обсягу робіт",
+        "example": "We need to control scope creep."
+      }
+    ]
+  },
+  {
+    "id": "technical-debt",
+    "word": "technical debt",
+    "phonetic": "/ˈtek.nɪ.kəl det/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The cost of additional work caused by choosing an easy solution now",
+        "translation": "технічний борг",
+        "example": "We are accumulating technical debt."
+      }
+    ]
+  },
+  {
+    "id": "workaround",
+    "word": "workaround",
+    "phonetic": "/ˈwɜː.kə.raʊnd/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A temporary solution to a problem",
+        "translation": "обхідне рішення",
+        "example": "We implemented a workaround for this issue."
+      }
+    ]
+  },
+  {
+    "id": "failure",
+    "word": "failure",
+    "phonetic": "/ˈfeɪ.ljər/",
+    "partOfSpeech": "іменник",
+    "category": "project management",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The state of something not working as expected",
+        "translation": "збій",
+        "example": "The system failure affected users."
       }
     ]
   }
