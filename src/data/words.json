@@ -889,5 +889,345 @@
         "example": "The system failure affected users."
       }
     ]
+  },
+  {
+    "id": "approval",
+    "word": "approval",
+    "phonetic": "/əˈpruː.vəl/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Official agreement or permission from a client",
+        "translation": "затвердження",
+        "example": "We are waiting for your approval to proceed."
+      }
+    ]
+  },
+  {
+    "id": "sign_off",
+    "word": "sign-off",
+    "phonetic": "/ˈsaɪn.ɒf/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Final approval confirming completion",
+        "translation": "фінальне погодження",
+        "example": "We need your sign-off before release."
+      }
+    ]
+  },
+  {
+    "id": "alignment",
+    "word": "alignment",
+    "phonetic": "/əˈlaɪn.mənt/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Shared understanding between parties",
+        "translation": "узгодженість",
+        "example": "Let’s ensure alignment on priorities."
+      }
+    ]
+  },
+  {
+    "id": "agreement",
+    "word": "agreement",
+    "phonetic": "/əˈɡriː.mənt/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A mutual decision accepted by all parties",
+        "translation": "домовленість",
+        "example": "We reached an agreement on the timeline."
+      }
+    ]
+  },
+  {
+    "id": "expectations",
+    "word": "expectations",
+    "phonetic": "/ˌek.spekˈteɪ.ʃənz/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "What a client anticipates or requires",
+        "translation": "очікування",
+        "example": "We want to meet your expectations."
+      }
+    ]
+  },
+  {
+    "id": "confirmation",
+    "word": "confirmation",
+    "phonetic": "/ˌkɒn.fəˈmeɪ.ʃən/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Verification or validation of something",
+        "translation": "підтвердження",
+        "example": "We need confirmation on this requirement."
+      }
+    ]
+  },
+  {
+    "id": "clarification",
+    "word": "clarification",
+    "phonetic": "/ˌklær.ɪ.fɪˈkeɪ.ʃən/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Explanation to remove confusion",
+        "translation": "уточнення",
+        "example": "We need clarification on this feature."
+      }
+    ]
+  },
+  {
+    "id": "validation",
+    "word": "validation",
+    "phonetic": "/ˌvæl.ɪˈdeɪ.ʃən/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Ensuring something meets requirements",
+        "translation": "валідація",
+        "example": "This needs client validation before release."
+      }
+    ]
+  },
+  {
+    "id": "approval_flow",
+    "word": "approval flow",
+    "phonetic": "/əˈpruː.vəl floʊ/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Process of getting approvals step by step",
+        "translation": "процес погодження",
+        "example": "Let’s define the approval flow."
+      }
+    ]
+  },
+  {
+    "id": "stakeholder",
+    "word": "stakeholder",
+    "phonetic": "/ˈsteɪkˌhoʊl.dər/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Person involved or interested in the project",
+        "translation": "стейкхолдер",
+        "example": "We need feedback from all stakeholders."
+      }
+    ]
+  },
+  {
+    "id": "decision",
+    "word": "decision",
+    "phonetic": "/dɪˈsɪʒ.ən/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "A conclusion reached after discussion",
+        "translation": "рішення",
+        "example": "We are waiting for your decision."
+      }
+    ]
+  },
+  {
+    "id": "feedback_loop",
+    "word": "feedback loop",
+    "phonetic": "/ˈfiːd.bæk luːp/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Continuous process of receiving and acting on feedback",
+        "translation": "цикл зворотного зв’язку",
+        "example": "We need a faster feedback loop."
+      }
+    ]
+  },
+  {
+    "id": "requirements_alignment",
+    "word": "requirements alignment",
+    "phonetic": "/rɪˈkwaɪər.mənts əˈlaɪn.mənt/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Ensuring all requirements are understood the same way",
+        "translation": "узгодження вимог",
+        "example": "Let’s finalize requirements alignment."
+      }
+    ]
+  },
+  {
+    "id": "consensus",
+    "word": "consensus",
+    "phonetic": "/kənˈsen.səs/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "General agreement among a group",
+        "translation": "консенсус",
+        "example": "We reached consensus on the solution."
+      }
+    ]
+  },
+  {
+    "id": "review",
+    "word": "review",
+    "phonetic": "/rɪˈvjuː/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Evaluation of work or deliverables",
+        "translation": "перегляд",
+        "example": "Let’s schedule a review session."
+      }
+    ]
+  },
+  {
+    "id": "revision",
+    "word": "revision",
+    "phonetic": "/rɪˈvɪʒ.ən/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Updated version after changes",
+        "translation": "перегляд (оновлення)",
+        "example": "We’ll send a revised version."
+      }
+    ]
+  },
+  {
+    "id": "acceptance",
+    "word": "acceptance",
+    "phonetic": "/əkˈsep.təns/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Client agreement that work meets expectations",
+        "translation": "прийняття",
+        "example": "This feature is ready for acceptance."
+      }
+    ]
+  },
+  {
+    "id": "approval_criteria",
+    "word": "approval criteria",
+    "phonetic": "/əˈpruː.vəl kraɪˈtɪə.ri.ə/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Conditions required for approval",
+        "translation": "критерії погодження",
+        "example": "Let’s define approval criteria."
+      }
+    ]
+  },
+  {
+    "id": "change_request",
+    "word": "change request",
+    "phonetic": "/tʃeɪndʒ rɪˈkwest/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "Formal proposal for modifying scope or work",
+        "translation": "запит на зміну",
+        "example": "We received a change request."
+      }
+    ]
+  },
+  {
+    "id": "final_agreement",
+    "word": "final agreement",
+    "phonetic": "/ˈfaɪ.nəl əˈɡriː.mənt/",
+    "partOfSpeech": "іменник",
+    "category": "client alignment",
+    "meanings": [
+      {
+        "pos": "іменник",
+        "freq": "primary",
+        "freqLabel": "основне",
+        "definition": "The last confirmed decision between parties",
+        "translation": "остаточна домовленість",
+        "example": "We reached a final agreement."
+      }
+    ]
   }
 ]
