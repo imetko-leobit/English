@@ -22,7 +22,13 @@
       "Bash(node /Users/user/Documents/English/node_modules/typescript/bin/tsc --noEmit --project /Users/user/Documents/English/tsconfig.json)",
       "Bash(node node_modules/typescript/lib/tsc.js --noEmit)",
       "Bash(node -e \"require\\('/Users/user/Documents/English/node_modules/typescript'\\)\")",
-      "Bash(node /Users/user/Documents/English/node_modules/typescript/lib/tsc.js --noEmit --project /Users/user/Documents/English/tsconfig.json)"
+      "Bash(node /Users/user/Documents/English/node_modules/typescript/lib/tsc.js --noEmit --project /Users/user/Documents/English/tsconfig.json)",
+      "Bash(node -e \"const ts = require\\('/Users/user/Documents/English/node_modules/typescript'\\); console.log\\(ts.version\\)\")",
+      "Bash(node /Users/user/Documents/English/node_modules/typescript/lib/tsc.js --noEmit -p /Users/user/Documents/English/tsconfig.json)",
+      "Bash(curl -s http://localhost:3000/grammar -o /dev/null -w \"%{http_code}\")",
+      "Bash(curl -s http://localhost:3000/grammar -w \"\\\\nHTTP: %{http_code}\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/generate-grammar -H 'Content-Type: application/json' -d '{\"topicId\":\"present-perfect\",\"level\":0}' -w '\\\\nHTTP: %{http_code}')",
+      "Bash(curl -s http://localhost:3000/api/generate-grammar -X POST -H \"Content-Type: application/json\" -d '{}' -w \"\\\\nHTTP: %{http_code}\")"
     ]
   }
 }
